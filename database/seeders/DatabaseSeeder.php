@@ -15,7 +15,7 @@ class DatabaseSeeder extends Seeder
     {
         $faker->seed(8792);
 
-        \App\Models\Animal_Type::factory()
+        \App\Models\AnimalType::factory()
             ->count(2)
             ->sequence(
                 ['name' => 'Dog'],
@@ -23,7 +23,7 @@ class DatabaseSeeder extends Seeder
             )
             ->create();
 
-        \App\Models\Rescue_Centre::factory(10)->create();
+        \App\Models\RescueCentre::class::factory(10)->create();
 
         \App\Models\Animal::factory(100)->create();
     }
