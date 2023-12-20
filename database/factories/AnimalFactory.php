@@ -15,7 +15,7 @@ class AnimalFactory extends Factory
         $animalType = $this->faker->numberBetween(1, 2);
         $canFoster = $this->faker->boolean();
         $animal = [
-            'name' => $this->faker->name(),
+            'name' => $this->faker->firstName(),
             'animal_type_id'=>$animalType,
             'rescue_centre_id'=>$this->faker->numberBetween(1, 10),
             'gender' => $this->faker->randomElement($array = array('Male','Female')),
