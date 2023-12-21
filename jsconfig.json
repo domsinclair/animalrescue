@@ -5,5 +5,11 @@
             "@/*": ["resources/js/*"]
         }
     },
+    "include": [
+        //...
+        /* Please ensure that you update the filenames and paths to accurately match those used in your project. */
+
+        "components.d.ts"
+    ],
     "exclude": ["node_modules", "public"]
 }

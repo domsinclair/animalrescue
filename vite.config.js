@@ -3,6 +3,8 @@ import laravel from "laravel-vite-plugin";
 import vue from "@vitejs/plugin-vue";
 import { liveDesigner } from "@pinegrow/vite-plugin";
 import { fileURLToPath, URL } from "node:url";
+import AutoImportComponents from "unplugin-vue-components/vite";
+import { PrimeVueResolver } from "unplugin-vue-components/resolvers";
 
 export default defineConfig({
     plugins: [
@@ -39,6 +41,20 @@ export default defineConfig({
                     includeAbsolute: false,
                 },
             },
+        }),
+        AutoImportComponents({
+            /* Please ensure that you update the filenames and paths to accurately match those used in your project. */
+
+            dirs: ["resources/js/components"],
+
+            // allow auto load markdown components under ./src/components/
+            extensions: ["vue", "md"],
+
+            // allow auto import and register components used in markdown
+            include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
+
+            resolvers: [PrimeVueResolver()], // Auto-import using resolvers
+            dts: "components.d.ts",
         }),
     ],
     resolve: {
