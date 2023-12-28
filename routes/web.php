@@ -24,7 +24,14 @@ Route::get('/', function () {
     ]);
 });
 
-Route::get('/centres',[\App\Http\Controllers\RescueCentreController::class, 'index']);
+Route::get('/',function() {
+    return Inertia::render('Centres',[
+        'centres' => \App\Models\RescueCentre::all()-> map(fn($centre)=> [
+            'id' => $centre -> id,
+            'name' => $centre -> name
+        ])
+    ]);
+});
 
 Route::middleware([
     'auth:sanctum',
