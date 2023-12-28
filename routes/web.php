@@ -24,6 +24,8 @@ Route::get('/', function () {
     ]);
 });
 
+Route::get('/centres',[\App\Http\Controllers\RescueCentreController::class, 'index']);
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
