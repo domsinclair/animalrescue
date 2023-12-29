@@ -24,11 +24,6 @@ class RescueCentreController extends Controller
 
     public function show(RescueCentre $rescueCentre)
     {
-
-
-//        return Inertia::render('RescueCentre/Show',[
-//            'rescueCentre'=> $rescueCentre
-//        ]);
         return $rescueCentre;
     }
 
