@@ -18,9 +18,7 @@ defineProps({
                 <Link v-if="canRegister" :href="route('register')" class="ms-4 font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Register</Link>
             </template>
         </div>
-        <div>
-            <Link :href="route('/centres')">Rescue Centres</Link>
-        </div>
+
         <div class="max-w-7xl mx-auto p-6 lg:p-8">
             <div class="flex justify-center">
                 <svg viewBox="0 0 62 65" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-16 w-auto bg-gray-100 dark:bg-gray-900">
@@ -28,6 +26,7 @@ defineProps({
                 </svg>
             </div>
             <div class="mt-16">
+
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
                     <a href="https://laravel.com/docs" class="scale-100 p-6 bg-white dark:bg-gray-800/50 dark:bg-gradient-to-bl from-gray-700/50 via-transparent dark:ring-1 dark:ring-inset dark:ring-white/5 rounded-lg shadow-2xl shadow-gray-500/20 dark:shadow-none flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline focus:outline-2 focus:outline-red-500"> <div>
                             <div class="h-16 w-16 bg-red-50 dark:bg-red-800/20 flex items-center justify-center rounded-full">
@@ -87,6 +86,13 @@ defineProps({
                             </svg>
                             Sponsor </a>
                     </div>
+                    <div>
+                        <h2 class="text-red-500">Hi</h2>
+                        <Link href="/rescuecentres">Rescue Centres</Link>
+                    </div>
+<!--                    <div>-->
+<!--                        <Link :href="/rescuecentres">Rescue Centres</Link>-->
+<!--                    </div>-->
                 </div>
                 <div class="ms-4 text-center text-sm text-gray-500 dark:text-gray-400 sm:text-end sm:ms-0">
                     Laravel v{{ laravelVersion }} (PHP v{{ phpVersion }})

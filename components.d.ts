@@ -18,6 +18,7 @@ declare module 'vue' {
     ConfirmationModal: typeof import('./resources/js/Components/ConfirmationModal.vue')['default']
     ConfirmsPassword: typeof import('./resources/js/Components/ConfirmsPassword.vue')['default']
     DangerButton: typeof import('./resources/js/Components/DangerButton.vue')['default']
+    DataTable: typeof import('primevue/datatable')['default']
     DialogModal: typeof import('./resources/js/Components/DialogModal.vue')['default']
     Dropdown: typeof import('./resources/js/Components/Dropdown.vue')['default']
     DropdownLink: typeof import('./resources/js/Components/DropdownLink.vue')['default']

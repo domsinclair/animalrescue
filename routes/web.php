@@ -24,14 +24,23 @@ Route::get('/', function () {
     ]);
 });
 
-Route::get('/',function() {
-    return Inertia::render('Centres',[
-        'centres' => \App\Models\RescueCentre::all()-> map(fn($centre)=> [
-            'id' => $centre -> id,
-            'name' => $centre -> name
-        ])
-    ]);
-});
+Route::get('rescuecentres',[\App\Http\Controllers\RescueCentreController::class, 'index'])
+    ->name('rescuecentres');
+
+//Route::get('rescuecentres',function(){
+//    return Inertia::render('RescueCentres/Index',[
+//        'centres' => \App\Http\Controllers\RescueCentreController::class, 'index'
+//    ]);
+//});
+
+//Route::get('/',function() {
+//    return Inertia::render('Centres',[
+//        'centres' => \App\Models\RescueCentre::all()-> map(fn($centre)=> [
+//            'id' => $centre -> id,
+//            'name' => $centre -> name
+//        ])
+//    ]);
+//});
 
 Route::middleware([
     'auth:sanctum',

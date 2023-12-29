@@ -1,6 +1,7 @@
 <script setup>
 import { Head } from '@inertiajs/vue3';
-
+import DataTable from 'primevue/datatable';
+import Column from 'primevue/column';
 let object;
 defineProps({centres: object})
 </script>
